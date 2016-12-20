@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>菜鸟教程</title>
+  <style>
+  div {
+    background-color: coral;
+    border: 1px sold;
+    padding: 50px;
+  }
+  </style>
+</head>
+<body >
+
+  <script>
+  function person(firstname, lastname, age, eyecolor){
+    this.firstname = firstname;
+    this.lastname = lastname;
+    this.age = age;
+    this.eyecolor = eyecolor;
+    this.changeName = changeName;
+    function changeName(name){
+      this.lastname = name;
+    }
+  }
+  myMother = new person("Sally", "Rally", 48, "green");
+  myMother.changeName("Doe");
+  document.write(myMother.lastname);
+  var x = 0.2 + 0.1;
+  document.write("<br>"+x);
+  </script>
+</body>
+
+</html>

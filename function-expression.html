@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>菜鸟教程</title>
+</head>
+<body>
+  <p id="demo">点击以下链接查看不同结果：</p>
+  <p id="Demo">尾部定位点</p>
+  <p id="arg">尾部定位点</p>
+  <p id="tostring">尾部定位点</p>
+
+  <script>
+  var x = function(a, b){return a*b};
+  document.getElementById("demo").innerHTML = x(10, 3);
+
+  (function() {
+    document.getElementById("Demo").innerHTML = "我是自己调用的";
+  })();
+
+  function myFunction(a, b){
+    return arguments.length;
+  }
+  document.getElementById("arg").innerHTML = myFunction(4, 3);
+
+  document.getElementById("tostring").innerHTML = myFunction.toString();
+  </script>
+
+</body>
+</html>

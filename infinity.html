@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <p>A number divided by a string is not a number</p>
+  <p>A number divided by a numeric string is a number</p>
+  <p id="demo"></p>
+
+  <button onclick="myFunction()">dian wo </button>
+  <script>
+  var str = 'runoob%sdfs';
+  var patt1 = new RegExp('\\w', 'g'); // 有转义作为正则表达式处理
+  var patt2 = new RegExp('\w', 'g');  // 无转义作为字符串处理
+  var patt3 =/\w+/g;  // 与 patt1 效果相同
+
+  document.write(patt1.test(str)) //输出 true
+  document.write("<br>")
+
+  document.write(str.match(patt1)+'<br>');
+  document.write(str.match(patt2)+'<br>');
+  document.write(str.match(patt3)+'<br>');
+
+  document.write(patt2.test(str)) //输出 false
+  document.write("<br>")
+
+  document.write(patt3.test(str)) //输出 true
+
+  </script>
+</body>
+</html>

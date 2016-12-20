@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>菜鸟教程</title>
+</head>
+<body>
+  <p id="demo">点击以下链接查看不同结果：</p>
+  <p id="demo1">点击以下链接查看不同结果：</p>
+
+  <script>
+  function myFunction(a, b){
+    this.firstName = a;
+    this.last = b;
+  }
+
+  var x = new myFunction("John", "Doe");
+  document.getElementById("demo").innerHTML = x.firstName;
+
+  var y = new myFunction("fu", "dw");
+  document.getElementById("demo1").innerHTML = y.firstName;
+  </script>
+
+</body>
+</html>

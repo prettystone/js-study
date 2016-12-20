@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>菜鸟教程</title>
+</head>
+<body>
+  <h1 id="welcome">欢迎你</h1>
+  <p>
+    局部变量在声明的函数内可以访问
+  </p>
+  <p id="demo">
+  </p>
+  <button type="button" onclick="myFunction('Harry Potter', 'Wizard')">点击这里</button>
+  <button type="button" onclick="myFunction('Bob', 'Builder')">点击这里</button>
+  <button type="button" onclick="carname='Volvo'">点击这里</button>
+  <button type="button" onclick="alert(carname)">点击这里</button>
+
+
+  <script>
+  myFunction();
+  document.getElementById("demo").innerHTML = "I can display " + typeof carName;
+  function myFunction(name, job){
+    var carName = "Volvo";
+  }
+  </script>
+</body>
+</html>

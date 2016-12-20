@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>菜鸟教程</title>
+</head>
+<body >
+  <p>实例在window对象中使用 addEventListener() 方法。</p>
+
+  <p>尝试重置浏览器的窗口触发 "resize" 事件句柄。</p>
+
+  <p id="demo"></p>
+  <div>
+    <input type="text" id="calc1">
+    +
+    <input type="text" id="calc2">
+    =
+
+    <button id="myBtn">=</button> <p id="result"></p>
+  </div>
+  <script>
+  document.getElementById("myBtn").addEventListener("click", function(){
+    var x = document.getElementById("calc1").value;
+    var y = document.getElementById("calc2").value;
+    document.getElementById("result").innerHTML = parseInt(x) + parseInt(y);
+  })
+  </script>
+</body>
+
+</html>

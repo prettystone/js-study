@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>菜鸟教程</title>
+</head>
+<body>
+  <h1 id="welcome">欢迎你</h1>
+  <div id="main">
+    <p>
+      DOM是非常有用的。
+    </p>
+    <p id="demo">
+      该实例展示了<b>getElementByTagName</b>方法</p>
+    </p>
+  </div>
+  <img id="image" src="http://www.runoob.com/try/demo_source/smiley.gif" width="160" height="120">
+  <button type="button" onclick="myFunction()">click</button>
+  <button type="button" onclick="changeImage()">改变图片</button>
+
+  <script>
+  document.getElementById("welcome").style.color = "#ff9900";
+  var x = document.getElementById("main");
+  var y = x.getElementsByTagName("p");
+  document.write('id="main"元素中的第一个段落为：'+y[0].innerHTML);
+  function myFunction(){
+    document.getElementById("welcome").innerHTML = "<p color='#ff0000'>welcome</p>";
+  }
+  function changeImage(){
+    document.getElementById("image").src = "http://www.runoob.com/try/demo_source/landscape.jpg";
+  }
+  </script>
+
+</body>
+</html>

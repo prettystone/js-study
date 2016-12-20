@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<button onclick="myStop()">stop</button>
+<script>
+var myVar = setInterval(function(){myTimer()}, 1000);
+function myTimer(){
+  var d = new Date();
+  var t = d.toLocaleTimeString();
+  document.getElementById("demo").innerHTML = t;
+}
+function myStop(){
+  window.clearInterval(myVar);
+}
+</script>
+</body>
+</html>
